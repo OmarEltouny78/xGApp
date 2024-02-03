@@ -6,6 +6,9 @@ import numpy as np
 
 import pickle
 
+
+import sklearn
+
 st.title('xG Model')
 
 st.subheader('CSV file should contain x and y coordinates of the shot,isFoot (if the shoot has been taken by foot or not) and isHead (If a shot is a header or not) ')
@@ -26,9 +29,9 @@ model=None
 modelOfChoice=st.radio("Choose your machine learning model",['Regular Play','Non Regular Play'])
 
 if modelOfChoice=='Regular Play':
-    model=pickle.load(open('https://github.com/OmarEltouny78/xGApp/raw/main/expected_goals_model_lr.sav', 'rb'))
+    model=pickle.load(open('https://github.com/OmarEltouny78/xGApp/blob/main/expected_goals_model_lr.sav', 'rb'))
 else:
-    model=pickle.load(open('https://github.com/OmarEltouny78/xGApp/raw/main/expected_goals_model_nonrp.sav', 'rb'))
+    model=pickle.load(open('https://github.com/OmarEltouny78/xGApp/blob/main/expected_goals_model_nonrp.sav', 'rb'))
 
 
 def feature_generation(df):
