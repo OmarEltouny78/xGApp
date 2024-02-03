@@ -16,7 +16,7 @@ st.markdown('***You can change the machine learning model used using the radio b
 
 st.subheader('**Here is an example dataframe**')
 
-df=pd.read_csv('example.csv')
+df=pd.read_csv('https://raw.githubusercontent.com/OmarEltouny78/xGApp/main/example.csv')
 
 st.dataframe(df[['x','y','isFoot','isHead']],width=700)
 
