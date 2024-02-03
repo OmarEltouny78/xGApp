@@ -1,0 +1,8 @@
+Team,venue,Event,Mins,Secs,x,y,isFoot,isHead,isGoal,Regular Play
+Egypt,H,Shot,7,21,94,50,0,1,0,1
+Congo DR,A,Shot,36,40,97,45,1,0,1,1
+Egypt,H,Shot,41,0,86,39,1,0,0,1
+Congo DR,A,Shot,52,1,95,61,1,0,0,1
+Egypt,H,Shot,60,20,94,35,1,0,0,1
+Congo DR,A,Shot,20,5,88,56,1,0,0,0
+Egypt,H,Shot,45,0,89,50,1,0,1,0
