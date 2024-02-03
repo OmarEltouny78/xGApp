@@ -1,4 +1,19 @@
 import streamlit as st
+import requests
+from PIL import Image
+from io import BytesIO
+
+url = 'https://github.com/OmarEltouny78/xGApp/blob/main/PL/shotmapLiverpool.png?raw=true'
+
+url1 = 'https://raw.githubusercontent.com/OmarEltouny78/xGApp/main/xGlollipop.png'
+
+
+response = requests.get(url)
+img = Image.open(BytesIO(response.content))
+
+response1 = requests.get(url1)
+img1 = Image.open(BytesIO(response1.content))
+
 st.title('xG Calculator')
 st.header('What is xG in the first place?')
 multi = ''' ##### Expected Goals (xG) is a metric designed to measure the probability of a shot resulting in a goal.
@@ -18,11 +33,11 @@ st.markdown(multi1)
 st.header('How can xG be represented?')
 
 st.subheader('Lollipop chart')
-st.image('PL\\xGlollipop.png', caption='Liverpool vs Chelsea xG Lollipop')
+st.image(img1, caption='Liverpool vs Chelsea xG Lollipop')
 st.markdown('###### Lollipop chart is a great way to show danger created by time over time')
 
 st.subheader("Team's shot map")
-st.image('PL\\shotmapLiverpool.png', caption='Liverpool shot map against Chelsea')
+st.image(img, caption='Liverpool shot map against Chelsea')
 st.markdown('###### Shotmap chart is a great way to show where the team takes shots. The closer to the goal is a shot, the higher the xG')
 
 st.header('Cool! I want to make something like this for "Insert favorite team name here. How?"')
