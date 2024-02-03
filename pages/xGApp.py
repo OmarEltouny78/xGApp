@@ -29,9 +29,9 @@ model=None
 modelOfChoice=st.radio("Choose your machine learning model",['Regular Play','Non Regular Play'])
 
 if modelOfChoice=='Regular Play':
-    model=pickle.load(open('https://github.com/OmarEltouny78/xGApp/blob/main/expected_goals_model_lr.sav', 'rb'))
+    model=pickle.load(open('expected_goals_model_lr.sav', 'rb'))
 else:
-    model=pickle.load(open('https://github.com/OmarEltouny78/xGApp/blob/main/expected_goals_model_nonrp.sav', 'rb'))
+    model=pickle.load(open('expected_goals_model_nonrp.sav', 'rb'))
 
 
 def feature_generation(df):
